@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionNormalCell" customModule="DYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="275" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="275" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_cate_normal" translatesAutoresizingMaskIntoConstraints="NO" id="dCB-4P-0tl">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="Na3-tg-oBr"/>
+                            <constraint firstAttribute="height" constant="14" id="pAi-Ue-Hjm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="interesting live" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6le-ff-Jcf">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="thj-Wv-0iz">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_player_normal" translatesAutoresizingMaskIntoConstraints="NO" id="JA7-8s-YKt"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="live author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7K2-W9-DHP">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na2-zx-c7n">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="6666 watching" image="home_live_player_normal"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="dCB-4P-0tl" firstAttribute="centerY" secondItem="6le-ff-Jcf" secondAttribute="centerY" id="0Wg-1T-Lgt"/>
+                <constraint firstItem="JA7-8s-YKt" firstAttribute="centerY" secondItem="7K2-W9-DHP" secondAttribute="centerY" id="1tn-3A-gv0"/>
+                <constraint firstItem="JA7-8s-YKt" firstAttribute="bottom" secondItem="thj-Wv-0iz" secondAttribute="bottom" constant="-5" id="49s-s1-ToE"/>
+                <constraint firstItem="6le-ff-Jcf" firstAttribute="top" secondItem="thj-Wv-0iz" secondAttribute="bottom" constant="5" id="C0t-eq-Ak9"/>
+                <constraint firstItem="Na2-zx-c7n" firstAttribute="top" secondItem="thj-Wv-0iz" secondAttribute="top" constant="5" id="DxI-xw-9tJ"/>
+                <constraint firstAttribute="bottom" secondItem="dCB-4P-0tl" secondAttribute="bottom" constant="5" id="Et3-jZ-kQz"/>
+                <constraint firstItem="JA7-8s-YKt" firstAttribute="leading" secondItem="thj-Wv-0iz" secondAttribute="leading" constant="5" id="Mnl-ES-5Ki"/>
+                <constraint firstAttribute="trailing" secondItem="thj-Wv-0iz" secondAttribute="trailing" id="Mz4-Zd-M0U"/>
+                <constraint firstItem="thj-Wv-0iz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aaF-mi-xYO"/>
+                <constraint firstItem="dCB-4P-0tl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iTG-HT-D7f"/>
+                <constraint firstItem="6le-ff-Jcf" firstAttribute="leading" secondItem="dCB-4P-0tl" secondAttribute="trailing" constant="5" id="qyp-lK-tb8"/>
+                <constraint firstAttribute="trailing" secondItem="6le-ff-Jcf" secondAttribute="trailing" constant="5" id="tHT-Q7-ZJz"/>
+                <constraint firstItem="thj-Wv-0iz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uT5-eT-Pd0"/>
+                <constraint firstItem="7K2-W9-DHP" firstAttribute="leading" secondItem="JA7-8s-YKt" secondAttribute="trailing" constant="5" id="vcA-cQ-EJe"/>
+                <constraint firstItem="Na2-zx-c7n" firstAttribute="trailing" secondItem="thj-Wv-0iz" secondAttribute="trailing" constant="-5" id="wKr-Nr-ft3"/>
+            </constraints>
+            <size key="customSize" width="275" height="220"/>
+            <point key="canvasLocation" x="66.5" y="-27"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+        <image name="home_live_cate_normal" width="14" height="14"/>
+        <image name="home_live_player_normal" width="14" height="14"/>
+    </resources>
+</document>

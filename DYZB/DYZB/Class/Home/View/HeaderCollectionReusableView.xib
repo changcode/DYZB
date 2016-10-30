@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_phone" translatesAutoresizingMaskIntoConstraints="NO" id="5ke-NA-Lhf"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fru-Bq-sXz">
+                    <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="4ir-GO-C8H"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beauty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tu-QS-4yY">
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etx-22-DeE">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="nhA-qX-nLW"/>
+                    </constraints>
+                    <state key="normal" title="More &gt;">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5ke-NA-Lhf" secondAttribute="bottom" constant="11" id="7MT-pV-nf4"/>
+                <constraint firstItem="Fru-Bq-sXz" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Lha-3j-o5f"/>
+                <constraint firstItem="Fru-Bq-sXz" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="aCc-pZ-6nl"/>
+                <constraint firstItem="5ke-NA-Lhf" firstAttribute="top" secondItem="Fru-Bq-sXz" secondAttribute="bottom" constant="11" id="aip-a7-RN6"/>
+                <constraint firstAttribute="trailing" secondItem="Fru-Bq-sXz" secondAttribute="trailing" id="bZV-jk-a5I"/>
+                <constraint firstItem="5tu-QS-4yY" firstAttribute="leading" secondItem="5ke-NA-Lhf" secondAttribute="trailing" constant="5" id="cDl-Qg-k9B"/>
+                <constraint firstItem="5ke-NA-Lhf" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="5" id="l5Y-Mq-RKG"/>
+                <constraint firstItem="5tu-QS-4yY" firstAttribute="centerY" secondItem="5ke-NA-Lhf" secondAttribute="centerY" id="mvb-WP-VEd"/>
+                <constraint firstItem="etx-22-DeE" firstAttribute="top" secondItem="Fru-Bq-sXz" secondAttribute="bottom" constant="5" id="t5I-bE-JSY"/>
+                <constraint firstAttribute="trailing" secondItem="etx-22-DeE" secondAttribute="trailing" constant="5" id="wrS-fh-vxe"/>
+                <constraint firstAttribute="bottom" secondItem="etx-22-DeE" secondAttribute="bottom" constant="5" id="zSB-x7-Ni1"/>
+            </constraints>
+            <point key="canvasLocation" x="291" y="114"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="home_header_phone" width="18" height="18"/>
+    </resources>
+</document>
