@@ -47,6 +47,8 @@ class RecommandViewController: UIViewController {
         return collectionView
     }()
     
+    fileprivate lazy var recommandViewModel = RecommandViewModel()
+    
     //System callback
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +57,7 @@ class RecommandViewController: UIViewController {
         setupUI()
         
 
-        
+        recommandViewModel.requestDate()
         
     }
 

@@ -14,3 +14,7 @@ let kTabBarHeight : CGFloat = 44
 
 let kMainScreenWidth  = UIScreen.main.bounds.width
 let kMainScreenHeigth = UIScreen.main.bounds.height
+
+let kBigDataRoom_URL = "http://capi.douyucdn.cn/api/v1/getbigDataRoom"
+let kPrettyShow_URL = "http://capi.douyucdn.cn/api/v1/getVerticalRoom"
+let kGameShow_URL = "http://capi.douyucdn.cn/api/v1/getHotCate"
