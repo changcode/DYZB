@@ -27,6 +27,14 @@ class AnchorModel: NSObject {
     //online people 
     var online : Int = 0
     
+    
+    //anchor cit
+    var anchor_city : String = ""
+    
+    override init() {
+        
+    }
+    
     init(dict : [String : NSObject]) {
         super.init()
         

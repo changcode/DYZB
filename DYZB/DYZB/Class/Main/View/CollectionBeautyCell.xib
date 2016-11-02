@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="219" height="280"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_player_normal" translatesAutoresizingMaskIntoConstraints="NO" id="lgu-hK-VbU" customClass="home_live_player_normal">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_live_player_normal" translatesAutoresizingMaskIntoConstraints="NO" id="lgu-hK-VbU">
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="ngf-4o-HF2"/>
                             <constraint firstAttribute="width" constant="14" id="qPB-gz-yzc"/>
@@ -71,6 +71,12 @@
                 <constraint firstAttribute="bottom" secondItem="vr0-uk-JR0" secondAttribute="bottom" constant="10" id="yFn-g2-gJz"/>
             </constraints>
             <size key="customSize" width="219" height="280"/>
+            <connections>
+                <outlet property="cityBtn" destination="vr0-uk-JR0" id="ymR-pJ-m8R"/>
+                <outlet property="liveImage" destination="mbe-zj-WI7" id="4kg-ec-8NI"/>
+                <outlet property="nicknameLabel" destination="Qd6-8x-t8O" id="wAs-Bm-Jcx"/>
+                <outlet property="watchingBtn" destination="P1B-mX-ool" id="80Q-WB-TY5"/>
+            </connections>
             <point key="canvasLocation" x="109.5" y="167"/>
         </collectionViewCell>
     </objects>

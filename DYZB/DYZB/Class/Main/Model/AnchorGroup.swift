@@ -26,10 +26,14 @@ class AnchorGroup: NSObject {
     var tag_name : String = ""
     
     //group icon
-    var icon_url : String = "home_header_phone"
+    var icon_name : String = "home_header_phone"
     
     //room list
     lazy var anchors : [AnchorModel] = [AnchorModel]()
+    
+    override init() {
+        
+    }
     
     init(dict : [String : NSObject]) {
         super.init()

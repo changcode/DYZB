@@ -22,6 +22,9 @@
 		A036F6921DC5C6F800D6B922 /* CollectionBeautyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A036F6901DC5C6F800D6B922 /* CollectionBeautyCell.xib */; };
 		A036F6951DC676D800D6B922 /* RecommandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036F6941DC676D800D6B922 /* RecommandViewModel.swift */; };
 		A036F6971DC6770F00D6B922 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A036F6961DC6770F00D6B922 /* NetworkTools.swift */; };
+		A08063BA1DC9300200C79A7F /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08063B91DC9300200C79A7F /* CollectionBaseCell.swift */; };
+		A08063BC1DC9385800C79A7F /* RecommandCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08063BB1DC9385800C79A7F /* RecommandCycle.swift */; };
+		A08063BE1DC9387200C79A7F /* RecommandCycle.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08063BD1DC9387200C79A7F /* RecommandCycle.xib */; };
 		A0984E211DC1CD5F005EC46D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0984E201DC1CD5F005EC46D /* AppDelegate.swift */; };
 		A0984E281DC1CD5F005EC46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0984E271DC1CD5F005EC46D /* Assets.xcassets */; };
 		A0984E551DC26151005EC46D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0984E541DC26151005EC46D /* MainViewController.swift */; };
@@ -33,6 +36,7 @@
 		A0BF2FB61DC6D3C8009B7FCD /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF2FB51DC6D3C8009B7FCD /* NSDate-Extension.swift */; };
 		A0BF2FB81DC6FDDF009B7FCD /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF2FB71DC6FDDF009B7FCD /* AnchorGroup.swift */; };
 		A0BF2FBA1DC7D02B009B7FCD /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF2FB91DC7D02B009B7FCD /* AnchorModel.swift */; };
+		A0FD8A041DC99A9D00285F57 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FD8A031DC99A9D00285F57 /* CycleModel.swift */; };
 		FA0FED2E41FA4AEE314E5D41 /* Pods_DYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB00E65C1D2C13E7F29DDB5A /* Pods_DYZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,9 @@
 		A036F6901DC5C6F800D6B922 /* CollectionBeautyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionBeautyCell.xib; sourceTree = "<group>"; };
 		A036F6941DC676D800D6B922 /* RecommandViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommandViewModel.swift; sourceTree = "<group>"; };
 		A036F6961DC6770F00D6B922 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		A08063B91DC9300200C79A7F /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
+		A08063BB1DC9385800C79A7F /* RecommandCycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommandCycle.swift; sourceTree = "<group>"; };
+		A08063BD1DC9387200C79A7F /* RecommandCycle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommandCycle.xib; sourceTree = "<group>"; };
 		A0984E1D1DC1CD5F005EC46D /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0984E201DC1CD5F005EC46D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0984E271DC1CD5F005EC46D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +72,7 @@
 		A0BF2FB51DC6D3C8009B7FCD /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		A0BF2FB71DC6FDDF009B7FCD /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		A0BF2FB91DC7D02B009B7FCD /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		A0FD8A031DC99A9D00285F57 /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
 		C4784D1893999F97CA904DCF /* Pods-DYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.debug.xcconfig"; sourceTree = "<group>"; };
 		CB00E65C1D2C13E7F29DDB5A /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2CD4B817FAD0F0371897D4 /* Pods-DYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +259,7 @@
 				A036F68C1DC5BF5500D6B922 /* CollectionNormalCell.xib */,
 				A036F68F1DC5C6F800D6B922 /* CollectionBeautyCell.swift */,
 				A036F6901DC5C6F800D6B922 /* CollectionBeautyCell.xib */,
+				A08063B91DC9300200C79A7F /* CollectionBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +276,7 @@
 		A0984E571DC2615F005EC46D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A0FD8A031DC99A9D00285F57 /* CycleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +286,8 @@
 			children = (
 				A036F6871DC5B68B00D6B922 /* HeaderCollectionReusableView.swift */,
 				A036F6881DC5B68B00D6B922 /* HeaderCollectionReusableView.xib */,
+				A08063BB1DC9385800C79A7F /* RecommandCycle.swift */,
+				A08063BD1DC9387200C79A7F /* RecommandCycle.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -408,6 +420,7 @@
 				A036F68A1DC5B68B00D6B922 /* HeaderCollectionReusableView.xib in Resources */,
 				A0984E671DC2618D005EC46D /* Home.storyboard in Resources */,
 				A0984E281DC1CD5F005EC46D /* Assets.xcassets in Resources */,
+				A08063BE1DC9387200C79A7F /* RecommandCycle.xib in Resources */,
 				A0984E701DC26198005EC46D /* Me.storyboard in Resources */,
 				A036F6921DC5C6F800D6B922 /* CollectionBeautyCell.xib in Resources */,
 				A0984E741DC26690005EC46D /* Main.storyboard in Resources */,
@@ -480,10 +493,13 @@
 				A036F67E1DC28BA100D6B922 /* PageTitleView.swift in Sources */,
 				A036F6911DC5C6F800D6B922 /* CollectionBeautyCell.swift in Sources */,
 				A036F67C1DC26D0800D6B922 /* UIBarButtonItem-Extension.swift in Sources */,
+				A0FD8A041DC99A9D00285F57 /* CycleModel.swift in Sources */,
 				A036F6821DC2C23000D6B922 /* PageContentView.swift in Sources */,
 				A0984E551DC26151005EC46D /* MainViewController.swift in Sources */,
+				A08063BC1DC9385800C79A7F /* RecommandCycle.swift in Sources */,
 				A036F6801DC28D0C00D6B922 /* Common.swift in Sources */,
 				A0BF2FB61DC6D3C8009B7FCD /* NSDate-Extension.swift in Sources */,
+				A08063BA1DC9300200C79A7F /* CollectionBaseCell.swift in Sources */,
 				A036F6861DC5AA5D00D6B922 /* RecommandViewController.swift in Sources */,
 				A036F6891DC5B68B00D6B922 /* HeaderCollectionReusableView.swift in Sources */,
 				A036F68D1DC5BF5500D6B922 /* CollectionNormalCell.swift in Sources */,

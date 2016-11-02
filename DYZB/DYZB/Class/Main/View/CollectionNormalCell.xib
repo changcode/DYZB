@@ -40,8 +40,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na2-zx-c7n">
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="6666 watching" image="home_live_player_normal"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </button>
                 </subviews>
             </view>
@@ -63,6 +70,12 @@
                 <constraint firstItem="Na2-zx-c7n" firstAttribute="trailing" secondItem="thj-Wv-0iz" secondAttribute="trailing" constant="-5" id="wKr-Nr-ft3"/>
             </constraints>
             <size key="customSize" width="275" height="220"/>
+            <connections>
+                <outlet property="liveImage" destination="thj-Wv-0iz" id="q7o-Q6-vvv"/>
+                <outlet property="nicknameLabel" destination="7K2-W9-DHP" id="58B-Ak-5lP"/>
+                <outlet property="titleLabel" destination="6le-ff-Jcf" id="dG6-Zj-4Ub"/>
+                <outlet property="watchingBtn" destination="Na2-zx-c7n" id="ach-t6-XMV"/>
+            </connections>
             <point key="canvasLocation" x="66.5" y="-27"/>
         </collectionViewCell>
     </objects>

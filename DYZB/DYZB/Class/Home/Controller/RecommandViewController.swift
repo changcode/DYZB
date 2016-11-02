@@ -21,9 +21,20 @@ fileprivate let kNormalCellId = "kNormalCellId"
 fileprivate let kHeadViewHeight : CGFloat = 50
 fileprivate let kHeadCellId = "kHeadCellId"
 
+fileprivate let kCycleViewHeight = kMainScreenWidth * 3 / 8
+
 class RecommandViewController: UIViewController {
     
     //my collectionView lazy init
+    
+    fileprivate lazy var recommandCycle : RecommandCycle = {
+        let recommandCycle = RecommandCycle.getRecommandCycle()
+        
+        recommandCycle.frame = CGRect(x: 0, y: -kCycleViewHeight, width: kMainScreenWidth, height: kCycleViewHeight)
+        
+        return recommandCycle
+    }()
+    
     fileprivate lazy var collectionView : UICollectionView = {  [unowned self] in
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: kItemWidth, height: kItemNormalHeight)
@@ -34,6 +45,8 @@ class RecommandViewController: UIViewController {
         
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
+        
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewHeight, 0, 0, 0)
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = UIColor.white
         
@@ -57,7 +70,12 @@ class RecommandViewController: UIViewController {
         setupUI()
         
 
-        recommandViewModel.requestDate()
+        recommandViewModel.requestDate { 
+            self.collectionView.reloadData()
+        }
+        recommandViewModel.requestCycleDate {
+            self.recommandCycle.cycleModels = self.recommandViewModel.cycleModels
+        }
         
     }
 
@@ -68,6 +86,8 @@ extension RecommandViewController {
     fileprivate func setupUI() {
         //add collectionView
         view.addSubview(collectionView)
+        collectionView.addSubview(recommandCycle)
+        
     }
 }
 
@@ -80,35 +100,36 @@ extension RecommandViewController : UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeadCellId, for: indexPath) as! HeaderCollectionReusableView
         
-        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeadCellId, for: indexPath)
+        headerView.group = recommandViewModel.anchorGroups[indexPath.section]
         
-        return cell
+        return headerView
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell : UICollectionViewCell!
+        let group = recommandViewModel.anchorGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.item ]
         
+        var cell : CollectionBaseCell!
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBeautyCellId, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kBeautyCellId, for: indexPath) as! CollectionBeautyCell
         } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellId, for: indexPath)
+
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellId, for: indexPath) as! CollectionNormalCell
         }
-            
+        cell.anchor =  anchor
         
         return cell
     }
 
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return self.recommandViewModel.anchorGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        } else {
-            return 4
-        }
+        let group : AnchorGroup = self.recommandViewModel.anchorGroups[section]
+        return group.anchors.count
     }
 }
