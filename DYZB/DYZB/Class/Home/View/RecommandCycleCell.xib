@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecommandCycleCell" customModule="DYZB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="205"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="358" height="205"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="ois-iu-w9U"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqC-ug-YPE">
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Gmh-qZ-NHk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.96077778840000005" green="1" blue="0.94036507319999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rqC-ug-YPE" secondAttribute="bottom" id="HPX-6e-PDd"/>
+                <constraint firstItem="ois-iu-w9U" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="M1d-Kw-n1u"/>
+                <constraint firstItem="rqC-ug-YPE" firstAttribute="centerX" secondItem="ois-iu-w9U" secondAttribute="centerX" id="Pg6-lm-z6S"/>
+                <constraint firstAttribute="trailing" secondItem="ois-iu-w9U" secondAttribute="trailing" id="Urt-0T-15r"/>
+                <constraint firstAttribute="bottom" secondItem="ois-iu-w9U" secondAttribute="bottom" id="o8h-iB-IdT"/>
+                <constraint firstItem="rqC-ug-YPE" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="zph-jA-BNK"/>
+                <constraint firstItem="ois-iu-w9U" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zr7-eG-hSR"/>
+            </constraints>
+            <size key="customSize" width="358" height="205"/>
+            <connections>
+                <outlet property="iconImage" destination="ois-iu-w9U" id="SnF-iv-3xn"/>
+                <outlet property="titleLabel" destination="rqC-ug-YPE" id="qpH-qQ-HeG"/>
+            </connections>
+            <point key="canvasLocation" x="30" y="-33.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+    </resources>
+</document>

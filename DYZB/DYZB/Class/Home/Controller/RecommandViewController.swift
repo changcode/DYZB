@@ -22,6 +22,7 @@ fileprivate let kHeadViewHeight : CGFloat = 50
 fileprivate let kHeadCellId = "kHeadCellId"
 
 fileprivate let kCycleViewHeight = kMainScreenWidth * 3 / 8
+fileprivate let kGameViewHeight : CGFloat = 90
 
 class RecommandViewController: UIViewController {
     
@@ -30,9 +31,17 @@ class RecommandViewController: UIViewController {
     fileprivate lazy var recommandCycle : RecommandCycle = {
         let recommandCycle = RecommandCycle.getRecommandCycle()
         
-        recommandCycle.frame = CGRect(x: 0, y: -kCycleViewHeight, width: kMainScreenWidth, height: kCycleViewHeight)
+        recommandCycle.frame = CGRect(x: 0, y: -(kCycleViewHeight + kGameViewHeight), width: kMainScreenWidth, height: kCycleViewHeight)
         
         return recommandCycle
+    }()
+    
+    fileprivate lazy var recommandGame: RecommendGameView = {
+        let recommandGame = RecommendGameView.recommendGameView()
+        recommandGame.frame = CGRect(x: 0, y: -kGameViewHeight, width: kMainScreenWidth, height: kGameViewHeight)
+        
+        
+        return recommandGame
     }()
     
     fileprivate lazy var collectionView : UICollectionView = {  [unowned self] in
@@ -46,7 +55,7 @@ class RecommandViewController: UIViewController {
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         
-        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewHeight, 0, 0, 0)
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewHeight + kGameViewHeight, 0, 0, 0)
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = UIColor.white
         
@@ -72,9 +81,11 @@ class RecommandViewController: UIViewController {
 
         recommandViewModel.requestDate { 
             self.collectionView.reloadData()
+            self.recommandGame.games = self.recommandViewModel.anchorGroups
         }
         recommandViewModel.requestCycleDate {
             self.recommandCycle.cycleModels = self.recommandViewModel.cycleModels
+            
         }
         
     }
@@ -87,7 +98,7 @@ extension RecommandViewController {
         //add collectionView
         view.addSubview(collectionView)
         collectionView.addSubview(recommandCycle)
-        
+        collectionView.addSubview(recommandGame)
     }
 }
 

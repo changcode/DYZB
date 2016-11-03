@@ -31,6 +31,9 @@ class AnchorGroup: NSObject {
     //room list
     lazy var anchors : [AnchorModel] = [AnchorModel]()
     
+    //game icon
+    var icon_url : String = "" 
+    
     override init() {
         
     }

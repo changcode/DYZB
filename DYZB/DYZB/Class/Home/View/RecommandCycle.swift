@@ -13,14 +13,18 @@ class RecommandCycle: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    fileprivate var cycleTimer : Timer?
+    
     public var cycleModels : [CycleModel]? {
         didSet {
             collectionView.reloadData()
             
             pageControl.numberOfPages = cycleModels?.count ?? 0
             
+            let indexPath : IndexPath = IndexPath(item: (cycleModels?.count ?? 0) * 10, section: 0)
             
-            
+            collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+            addCycleTimer()
         }
     }
     
@@ -29,7 +33,8 @@ class RecommandCycle: UIView {
         autoresizingMask = UIViewAutoresizing()
         
         //register cell
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleCellID)
+        
+        collectionView.register(UINib(nibName: "RecommandCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleCellID)
         collectionView.showsHorizontalScrollIndicator = false
         
         //setup cell
@@ -56,15 +61,52 @@ extension RecommandCycle {
 //UICollection view delegate 
 extension RecommandCycle : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cycleModels?.count ?? 0
+        return (cycleModels?.count ?? 0) * 10000
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath)
+        var cell : RecommandCycleCell!
+        cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath) as! RecommandCycleCell
         
-        
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
-        
+        cell.cycleModel = cycleModels?[indexPath.item % (cycleModels?.count ?? 1)] ?? nil
         
         return cell
     }
+}
+
+extension RecommandCycle : UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
+        let pageNum = Int(offset / scrollView.bounds.width) % (cycleModels?.count ?? 1)
+        self.pageControl.currentPage = pageNum
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        removeCycleTimer()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        addCycleTimer()
+    }
+}
+
+
+extension RecommandCycle {
+    fileprivate func addCycleTimer() {
+        cycleTimer = Timer(timeInterval: 3.0, target: self, selector: #selector(scrollToNext), userInfo: nil, repeats: true)
+        RunLoop.main.add(cycleTimer!, forMode: .commonModes)
+    }
+    
+    fileprivate func removeCycleTimer() {
+        cycleTimer?.invalidate()
+        cycleTimer = nil
+    }
+    
+    @objc private func scrollToNext () {
+        let currentOffsetX = collectionView.contentOffset.x
+        let offset = currentOffsetX + collectionView.bounds.width
+        
+        collectionView.setContentOffset(CGPoint(x:offset, y: 0), animated: true)
+    }
+    
 }

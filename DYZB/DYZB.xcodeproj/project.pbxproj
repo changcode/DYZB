@@ -36,7 +36,13 @@
 		A0BF2FB61DC6D3C8009B7FCD /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF2FB51DC6D3C8009B7FCD /* NSDate-Extension.swift */; };
 		A0BF2FB81DC6FDDF009B7FCD /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF2FB71DC6FDDF009B7FCD /* AnchorGroup.swift */; };
 		A0BF2FBA1DC7D02B009B7FCD /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF2FB91DC7D02B009B7FCD /* AnchorModel.swift */; };
+		A0F37B621DCB82A60022EB01 /* RecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F37B611DCB82A60022EB01 /* RecommendGameView.swift */; };
+		A0F37B641DCB82AF0022EB01 /* RecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0F37B631DCB82AF0022EB01 /* RecommendGameView.xib */; };
+		A0F37B671DCB83580022EB01 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F37B651DCB83580022EB01 /* CollectionGameCell.swift */; };
+		A0F37B681DCB83580022EB01 /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0F37B661DCB83580022EB01 /* CollectionGameCell.xib */; };
 		A0FD8A041DC99A9D00285F57 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FD8A031DC99A9D00285F57 /* CycleModel.swift */; };
+		A0FD8A071DC99ECD00285F57 /* RecommandCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FD8A051DC99ECD00285F57 /* RecommandCycleCell.swift */; };
+		A0FD8A081DC99ECD00285F57 /* RecommandCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FD8A061DC99ECD00285F57 /* RecommandCycleCell.xib */; };
 		FA0FED2E41FA4AEE314E5D41 /* Pods_DYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB00E65C1D2C13E7F29DDB5A /* Pods_DYZB.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +78,13 @@
 		A0BF2FB51DC6D3C8009B7FCD /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		A0BF2FB71DC6FDDF009B7FCD /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		A0BF2FB91DC7D02B009B7FCD /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		A0F37B611DCB82A60022EB01 /* RecommendGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendGameView.swift; sourceTree = "<group>"; };
+		A0F37B631DCB82AF0022EB01 /* RecommendGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendGameView.xib; sourceTree = "<group>"; };
+		A0F37B651DCB83580022EB01 /* CollectionGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
+		A0F37B661DCB83580022EB01 /* CollectionGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
 		A0FD8A031DC99A9D00285F57 /* CycleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
+		A0FD8A051DC99ECD00285F57 /* RecommandCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommandCycleCell.swift; sourceTree = "<group>"; };
+		A0FD8A061DC99ECD00285F57 /* RecommandCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommandCycleCell.xib; sourceTree = "<group>"; };
 		C4784D1893999F97CA904DCF /* Pods-DYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.debug.xcconfig"; sourceTree = "<group>"; };
 		CB00E65C1D2C13E7F29DDB5A /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2CD4B817FAD0F0371897D4 /* Pods-DYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.release.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +300,12 @@
 				A036F6881DC5B68B00D6B922 /* HeaderCollectionReusableView.xib */,
 				A08063BB1DC9385800C79A7F /* RecommandCycle.swift */,
 				A08063BD1DC9387200C79A7F /* RecommandCycle.xib */,
+				A0FD8A051DC99ECD00285F57 /* RecommandCycleCell.swift */,
+				A0FD8A061DC99ECD00285F57 /* RecommandCycleCell.xib */,
+				A0F37B611DCB82A60022EB01 /* RecommendGameView.swift */,
+				A0F37B631DCB82AF0022EB01 /* RecommendGameView.xib */,
+				A0F37B651DCB83580022EB01 /* CollectionGameCell.swift */,
+				A0F37B661DCB83580022EB01 /* CollectionGameCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,7 +403,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				TargetAttributes = {
 					A0984E1C1DC1CD5F005EC46D = {
 						CreatedOnToolsVersion = 8.0;
@@ -422,11 +440,14 @@
 				A0984E281DC1CD5F005EC46D /* Assets.xcassets in Resources */,
 				A08063BE1DC9387200C79A7F /* RecommandCycle.xib in Resources */,
 				A0984E701DC26198005EC46D /* Me.storyboard in Resources */,
+				A0F37B681DCB83580022EB01 /* CollectionGameCell.xib in Resources */,
+				A0F37B641DCB82AF0022EB01 /* RecommendGameView.xib in Resources */,
 				A036F6921DC5C6F800D6B922 /* CollectionBeautyCell.xib in Resources */,
 				A0984E741DC26690005EC46D /* Main.storyboard in Resources */,
 				A0984E6D1DC26195005EC46D /* Live.storyboard in Resources */,
 				A036F68E1DC5BF5500D6B922 /* CollectionNormalCell.xib in Resources */,
 				A0984E6A1DC26192005EC46D /* Follow.storyboard in Resources */,
+				A0FD8A081DC99ECD00285F57 /* RecommandCycleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +510,7 @@
 				A036F6951DC676D800D6B922 /* RecommandViewModel.swift in Sources */,
 				A0984E211DC1CD5F005EC46D /* AppDelegate.swift in Sources */,
 				A036F6841DC2D35F00D6B922 /* UIColor-Extension.swift in Sources */,
+				A0FD8A071DC99ECD00285F57 /* RecommandCycleCell.swift in Sources */,
 				A0BF2FB81DC6FDDF009B7FCD /* AnchorGroup.swift in Sources */,
 				A036F67E1DC28BA100D6B922 /* PageTitleView.swift in Sources */,
 				A036F6911DC5C6F800D6B922 /* CollectionBeautyCell.swift in Sources */,
@@ -497,10 +519,12 @@
 				A036F6821DC2C23000D6B922 /* PageContentView.swift in Sources */,
 				A0984E551DC26151005EC46D /* MainViewController.swift in Sources */,
 				A08063BC1DC9385800C79A7F /* RecommandCycle.swift in Sources */,
+				A0F37B621DCB82A60022EB01 /* RecommendGameView.swift in Sources */,
 				A036F6801DC28D0C00D6B922 /* Common.swift in Sources */,
 				A0BF2FB61DC6D3C8009B7FCD /* NSDate-Extension.swift in Sources */,
 				A08063BA1DC9300200C79A7F /* CollectionBaseCell.swift in Sources */,
 				A036F6861DC5AA5D00D6B922 /* RecommandViewController.swift in Sources */,
+				A0F37B671DCB83580022EB01 /* CollectionGameCell.swift in Sources */,
 				A036F6891DC5B68B00D6B922 /* HeaderCollectionReusableView.swift in Sources */,
 				A036F68D1DC5BF5500D6B922 /* CollectionNormalCell.swift in Sources */,
 				A036F6791DC2697D00D6B922 /* HomeViewController.swift in Sources */,
@@ -572,6 +596,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -621,6 +646,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -649,6 +675,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4784D1893999F97CA904DCF /* Pods-DYZB.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7C9RPRE4T4;
@@ -666,6 +693,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA2CD4B817FAD0F0371897D4 /* Pods-DYZB.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7C9RPRE4T4;
